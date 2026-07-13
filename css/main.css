@@ -1,30 +1,32 @@
-
-/* ================================
-   Custom properties
-================================ */
+/* =================================
+   VARIABLES
+================================= */
 
 :root {
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --color-gold: #d69e3d;
-  --color-dark-gold: #966f2c;
-  --color-background: #f3f0e9;
-  --color-text: #222222;
-  --color-overlay: rgb(0 0 0 / 55%);
-  --wrapper-width: 1200px;
-  --section-spacing: 4rem;
+  --white: #ffffff;
+  --black: #000000;
+  --gold: #d69e3d;
+  --dark-gold: #966f2c;
+  --background: #f3f0e9;
+  --text: #222222;
+  --wrapper: 1200px;
   --transition: 0.3s ease;
 }
 
-/* ================================
-   Global styles
-================================ */
+/* =================================
+   GLOBAL STYLES
+================================= */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--background);
+  color: var(--text);
   font-family: "Karla", sans-serif;
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 h1,
@@ -53,17 +55,18 @@ h3 {
   font-size: 1.375rem;
 }
 
-p {
-  line-height: 1.6;
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .wrapper {
-  width: min(calc(100% - 2rem), var(--wrapper-width));
+  width: min(calc(100% - 2rem), var(--wrapper));
   margin-inline: auto;
 }
 
 .section-spacing {
-  padding-block: var(--section-spacing);
+  padding-block: 4rem;
 }
 
 .section-heading {
@@ -84,26 +87,25 @@ p {
 
 .eyebrow {
   margin-bottom: 0.5rem;
-  color: var(--color-gold);
-  font-family: "Karla", sans-serif;
+  color: var(--gold);
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-/* ================================
-   Accessibility
-================================ */
+/* =================================
+   ACCESSIBILITY
+================================= */
 
 .skip-link {
   position: fixed;
   top: 1rem;
   left: 1rem;
   z-index: 9999;
-  padding: 0.75rem 1rem;
-  background-color: var(--color-white);
-  color: var(--color-black);
+  padding: 0.8rem 1rem;
+  background-color: var(--white);
+  color: var(--black);
   font-weight: 700;
   transform: translateY(-200%);
   transition: transform var(--transition);
@@ -113,21 +115,19 @@ p {
   transform: translateY(0);
 }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--color-gold);
+a:focus-visible {
+  outline: 3px solid var(--gold);
   outline-offset: 4px;
 }
 
-/* ================================
-   Buttons
-================================ */
+/* =================================
+   BUTTONS
+================================= */
 
 .button {
   display: inline-block;
-  padding: 0.85rem 1.4rem;
+  padding: 0.9rem 1.5rem;
   border: 2px solid transparent;
-  font-family: "Karla", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -146,42 +146,42 @@ button:focus-visible {
 }
 
 .button-light {
-  background-color: var(--color-white);
-  color: var(--color-black);
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .button-light:hover,
 .button-light:focus-visible {
-  background-color: var(--color-gold);
-  color: var(--color-black);
+  background-color: var(--gold);
+  color: var(--black);
 }
 
 .button-dark {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .button-dark:hover,
 .button-dark:focus-visible {
-  background-color: var(--color-dark-gold);
+  background-color: var(--dark-gold);
 }
 
 .button-outline {
-  border-color: var(--color-white);
+  border-color: var(--white);
   background-color: transparent;
-  color: var(--color-white);
+  color: var(--white);
 }
 
 .button-outline:hover,
 .button-outline:focus-visible {
-  border-color: var(--color-gold);
-  background-color: var(--color-gold);
-  color: var(--color-black);
+  border-color: var(--gold);
+  background-color: var(--gold);
+  color: var(--black);
 }
 
-/* ================================
-   Header
-================================ */
+/* =================================
+   HEADER
+================================= */
 
 .site-header {
   position: absolute;
@@ -209,15 +209,14 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .main-navigation a {
   position: relative;
-  color: var(--color-white);
+  color: var(--white);
   font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: color var(--transition);
 }
@@ -228,16 +227,15 @@ button:focus-visible {
   bottom: -0.4rem;
   left: 0;
   height: 2px;
-  background-color: var(--color-gold);
+  background-color: var(--gold);
   content: "";
   transform: scaleX(0);
-  transform-origin: center;
   transition: transform var(--transition);
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus-visible {
-  color: var(--color-gold);
+  color: var(--gold);
 }
 
 .main-navigation a:hover::after,
@@ -245,9 +243,9 @@ button:focus-visible {
   transform: scaleX(1);
 }
 
-/* ================================
-   Hero
-================================ */
+/* =================================
+   HERO
+================================= */
 
 .hero {
   position: relative;
@@ -255,7 +253,7 @@ button:focus-visible {
   display: grid;
   place-items: center;
   overflow: hidden;
-  color: var(--color-white);
+  color: var(--white);
   text-align: center;
 }
 
@@ -272,14 +270,14 @@ button:focus-visible {
 }
 
 .hero-overlay {
-  background-color: var(--color-overlay);
+  background-color: rgb(0 0 0 / 55%);
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 850px;
-  padding-top: 6rem;
+  padding-top: 7rem;
   animation: hero-fade 1s ease-out both;
 }
 
@@ -303,10 +301,9 @@ button:focus-visible {
     transform: translateY(0);
   }
 }
-
-/* ================================
-   Coffee gallery
-================================ */
+/* =================================
+   COFFEE GALLERY
+================================= */
 
 .coffee-gallery {
   display: grid;
@@ -325,22 +322,20 @@ button:focus-visible {
   height: 260px;
 }
 
-/* Complex selector 1 */
-
-.coffee-gallery > img:nth-child(n + 2) {
+.coffee-gallery > img {
   transition:
     transform var(--transition),
     filter var(--transition);
 }
 
-.coffee-gallery > img:nth-child(n + 2):hover {
+.coffee-gallery > img:hover {
   filter: brightness(0.9);
   transform: scale(1.02);
 }
 
-/* ================================
-   Benefits
-================================ */
+/* =================================
+   BENEFITS
+================================= */
 
 .benefits-grid {
   display: grid;
@@ -352,8 +347,8 @@ button:focus-visible {
 }
 
 .benefit-icon {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto 1.25rem;
 }
 
@@ -366,16 +361,14 @@ button:focus-visible {
   margin-inline: auto;
 }
 
-/* Complex selector 2 */
-
 .benefits-grid > article + article {
   padding-top: 2rem;
-  border-top: 1px solid rgb(150 111 44 / 35%);
+  border-top: 1px solid rgb(150 111 44 / 30%);
 }
 
-/* ================================
-   Menu and location callouts
-================================ */
+/* =================================
+   MENU AND LOCATION CALLOUTS
+================================= */
 
 .callouts {
   display: grid;
@@ -387,7 +380,7 @@ button:focus-visible {
   display: grid;
   place-items: center;
   overflow: hidden;
-  color: var(--color-white);
+  color: var(--white);
   text-align: center;
 }
 
@@ -404,33 +397,44 @@ button:focus-visible {
   transition: transform 0.6s ease;
 }
 
+/*
+  Both panels use coffee-shop.jpeg.
+  These positions make the image appear
+  like one continuous image on desktop.
+*/
+
+.callout-menu .callout-image {
+  object-position: left center;
+}
+
+.callout-location .callout-image {
+  object-position: right center;
+}
+
 .callout-overlay {
-  background-color: rgb(0 0 0 / 60%);
+  background-color: rgb(0 0 0 / 52%);
 }
 
 .callout:hover .callout-image {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .callout-content {
   position: relative;
   z-index: 2;
-  width: min(calc(100% - 2rem), 500px);
+  width: min(calc(100% - 2rem), 520px);
 }
 
 .callout-content h2 {
   margin-bottom: 1.5rem;
 }
 
-/* Complex selector 3 */
-
 .callout-content > .eyebrow + h2 {
   margin-top: 0.25rem;
 }
-
-/* ================================
-   About
-================================ */
+/* =================================
+   ABOUT SECTION
+================================= */
 
 .about-grid {
   display: grid;
@@ -455,17 +459,17 @@ button:focus-visible {
   margin-top: 0.5rem;
 }
 
-/* ================================
-   Testimonials
-================================ */
+/* =================================
+   TESTIMONIALS
+================================= */
 
 .testimonials {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .section-heading-light h2 {
-  color: var(--color-white);
+  color: var(--white);
 }
 
 .testimonials-grid {
@@ -497,8 +501,8 @@ button:focus-visible {
   background:
     linear-gradient(
       to top,
-      rgb(0 0 0 / 90%),
-      rgb(0 0 0 / 10%) 70%
+      rgb(0 0 0 / 92%),
+      rgb(0 0 0 / 8%) 75%
     );
 }
 
@@ -515,32 +519,27 @@ button:focus-visible {
 }
 
 .customer-name {
-  color: var(--color-gold);
+  color: var(--gold);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-/* ================================
-   Footer
-================================ */
+/* =================================
+   FOOTER
+================================= */
 
 .site-footer {
   padding-block: 1.5rem;
   border-top: 1px solid rgb(255 255 255 / 15%);
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--black);
+  color: var(--white);
   text-align: center;
 }
-
-/* ================================
-   Tablet breakpoint
-================================ */
+/* =================================
+   TABLET BREAKPOINT
+================================= */
 
 @media (min-width: 768px) {
-  :root {
-    --section-spacing: 5rem;
-  }
-
   h1 {
     font-size: 3rem;
   }
@@ -551,6 +550,10 @@ button:focus-visible {
 
   h3 {
     font-size: 1.75rem;
+  }
+
+  .section-spacing {
+    padding-block: 5rem;
   }
 
   .header-wrapper {
@@ -567,7 +570,7 @@ button:focus-visible {
   }
 
   .hero-content {
-    padding-top: 4rem;
+    padding-top: 5rem;
   }
 
   .coffee-gallery {
@@ -627,9 +630,9 @@ button:focus-visible {
   }
 }
 
-/* ================================
-   Desktop breakpoint
-================================ */
+/* =================================
+   DESKTOP BREAKPOINT
+================================= */
 
 @media (min-width: 1100px) {
   h1 {
@@ -674,8 +677,8 @@ button:focus-visible {
   }
 
   .benefit-icon {
-    width: 85px;
-    height: 85px;
+    width: 90px;
+    height: 90px;
   }
 
   .callout {
@@ -698,5 +701,23 @@ button:focus-visible {
     grid-column: auto;
     width: auto;
     margin-inline: 0;
+  }
+}
+
+/* =================================
+   REDUCED MOTION
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

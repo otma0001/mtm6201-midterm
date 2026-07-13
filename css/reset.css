@@ -1,4 +1,6 @@
-/* Box sizing */
+/* =================================
+   MODERN CSS RESET
+================================= */
 
 *,
 *::before,
@@ -6,7 +8,9 @@
   box-sizing: border-box;
 }
 
-/* Remove default spacing */
+html {
+  scroll-behavior: smooth;
+}
 
 html,
 body,
@@ -18,47 +22,40 @@ ul,
 ol,
 li,
 figure,
+figcaption,
 blockquote {
   margin: 0;
   padding: 0;
-}
-
-/* Base document settings */
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
-
-/* Lists */
 
 ul,
 ol {
   list-style: none;
 }
 
-/* Images */
-
 img,
 picture,
-svg {
+svg,
+canvas {
   display: block;
   max-width: 100%;
 }
 
-/* Links */
+img {
+  height: auto;
+}
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
-/* Form controls */
 
 button,
 input,
@@ -67,7 +64,31 @@ select {
   font: inherit;
 }
 
-/* Reduced motion accessibility */
+button {
+  border: 0;
+  background: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+:target {
+  scroll-margin-top: 6rem;
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +10,11 @@
 
   <meta
     name="description"
-    content="My Coffee House offers fair trade coffee, local baked goods and a welcoming coffee shop experience."
+    content="My Coffee House offers fair trade coffee, local baked goods, and a welcoming coffee shop experience."
   >
 
   <title>My Coffee House</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -25,19 +23,16 @@
     rel="stylesheet"
   >
 
-  <!-- CSS files -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-  <!-- Accessibility skip link -->
   <a class="skip-link" href="#main-content">
     Skip to main content
   </a>
 
-  <!-- Header -->
   <header class="site-header" id="home">
     <div class="wrapper header-wrapper">
 
@@ -73,17 +68,24 @@
 
   <main id="main-content">
 
-    <!-- Hero -->
     <section
       class="hero"
       aria-labelledby="hero-title"
     >
       <img
         class="hero-image"
-        src="images/hero-background.jpg"
-        srcset="images/hero-background.jpg 1200w"
-        sizes="100vw"
-        alt="Warm and welcoming coffee shop interior with a fresh cup of coffee"
+        src="images/hero-background.jpeg"
+        srcset="
+          images/hero-background.jpeg 600w,
+          images/hero-background.jpeg 900w,
+          images/hero-background.jpeg 1200w
+        "
+        sizes="
+          (min-width: 1200px) 1200px,
+          (min-width: 768px) 100vw,
+          100vw
+        "
+        alt="Warm and welcoming coffee shop interior"
       >
 
       <div class="hero-overlay" aria-hidden="true"></div>
@@ -105,7 +107,6 @@
       </div>
     </section>
 
-    <!-- Coffee gallery -->
     <section
       class="coffee-experience section-spacing"
       aria-labelledby="experience-title"
@@ -126,39 +127,38 @@
 
           <img
             class="gallery-image gallery-image-large"
-            src="images/latte.jpg"
+            src="images/latte.jpeg"
             alt="Fresh latte with decorative foam art"
           >
 
           <img
             class="gallery-image"
-            src="images/coffee-beans.jpg"
+            src="images/coffee-beans.jpeg"
             alt="Freshly roasted coffee beans"
           >
 
           <img
             class="gallery-image"
-            src="images/pouring-coffee.jpg"
-            alt="Coffee being carefully poured into a cup"
+            src="images/pouring-coffee.jpeg"
+            alt="Coffee being poured into a cup"
           >
 
           <img
             class="gallery-image"
-            src="images/three-cups.jpg"
+            src="images/three-cups.jpeg"
             alt="Three cups of freshly prepared coffee"
           >
 
           <img
             class="gallery-image"
-            src="images/coffee-shop.jpg"
-            alt="Interior of a comfortable local coffee shop"
+            src="images/coffee-shop.jpeg"
+            alt="Interior of a local coffee shop"
           >
 
         </div>
       </div>
     </section>
 
-    <!-- Why visit us -->
     <section
       class="benefits section-spacing"
       aria-labelledby="benefits-title"
@@ -228,7 +228,6 @@
       </div>
     </section>
 
-    <!-- Menu and locations -->
     <section
       class="callouts"
       aria-label="Menu and coffee shop locations"
@@ -237,16 +236,20 @@
       <article class="callout callout-menu" id="menu">
         <img
           class="callout-image"
-          src="images/coffee-shop.jpg"
-          alt="Coffee shop counter displaying fresh drinks and baked goods"
+          src="images/coffee-shop.jpeg"
+          alt="Coffee shop counter with fresh drinks"
         >
 
         <div class="callout-overlay" aria-hidden="true"></div>
 
         <div class="callout-content">
-          <p class="eyebrow">Our Menu</p>
+          <p class="eyebrow">
+            Our Menu
+          </p>
 
-          <h2>Explore what we have to offer you</h2>
+          <h2>
+            Explore what we have to offer you
+          </h2>
 
           <a class="button button-light" href="#menu">
             Explore our menu
@@ -257,16 +260,20 @@
       <article class="callout callout-location" id="locations">
         <img
           class="callout-image"
-          src="images/coffee-beans.jpg"
-          alt="Roasted coffee beans representing our coffee shop locations"
+          src="images/coffee-beans.jpeg"
+          alt="Roasted coffee beans"
         >
 
         <div class="callout-overlay" aria-hidden="true"></div>
 
         <div class="callout-content">
-          <p class="eyebrow">Locations</p>
+          <p class="eyebrow">
+            Locations
+          </p>
 
-          <h2>Find your nearest coffee shop</h2>
+          <h2>
+            Find your nearest coffee shop
+          </h2>
 
           <a class="button button-outline" href="#locations">
             View Locations
@@ -276,7 +283,6 @@
 
     </section>
 
-    <!-- About us -->
     <section
       class="about section-spacing"
       id="about"
@@ -287,8 +293,8 @@
         <div class="about-image-container">
           <img
             class="about-image"
-            src="images/about-us.jpg"
-            alt="Barista preparing coffee behind the counter at My Coffee House"
+            src="images/about-us.jpeg"
+            alt="Barista preparing coffee behind the counter"
           >
         </div>
 
@@ -325,7 +331,6 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
     <section
       class="testimonials section-spacing"
       aria-labelledby="testimonials-title"
@@ -346,11 +351,14 @@
 
           <article class="testimonial-card">
             <img
-              src="images/testimonial-1.jpg"
-              alt="Portrait of customer Jane from Toronto"
+              src="images/testimonial-1.jpeg"
+              alt="Customer Jane from Toronto"
             >
 
-            <div class="testimonial-overlay" aria-hidden="true"></div>
+            <div
+              class="testimonial-overlay"
+              aria-hidden="true"
+            ></div>
 
             <div class="testimonial-content">
               <blockquote>
@@ -368,11 +376,14 @@
 
           <article class="testimonial-card">
             <img
-              src="images/testimonial-2.jpg"
-              alt="Portrait of customer Scott from Ottawa"
+              src="images/testimonial-2.jpeg"
+              alt="Customer Scott from Ottawa"
             >
 
-            <div class="testimonial-overlay" aria-hidden="true"></div>
+            <div
+              class="testimonial-overlay"
+              aria-hidden="true"
+            ></div>
 
             <div class="testimonial-content">
               <blockquote>
@@ -390,11 +401,14 @@
 
           <article class="testimonial-card">
             <img
-              src="images/testimonial-3.jpg"
-              alt="Portrait of customer Susie from Ottawa"
+              src="images/testimonial-3.jpeg"
+              alt="Customer Susie from Ottawa"
             >
 
-            <div class="testimonial-overlay" aria-hidden="true"></div>
+            <div
+              class="testimonial-overlay"
+              aria-hidden="true"
+            ></div>
 
             <div class="testimonial-content">
               <blockquote>
@@ -416,7 +430,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="wrapper">
       <p>
